@@ -8,9 +8,13 @@ internal abstract class AbstractBaseClass
 
     // 2.
     // Виртуальный метод передается производному классу как при наследовании от конкретного класса.
-    virtual public void VirtualMethod() => Console.WriteLine("AbstractBaseClass.VirtualMethod");
+    public virtual void VirtualMethod() => Console.WriteLine("AbstractBaseClass.VirtualMethod");
 
     // 3.
     // Абстрактный метод - реализуется в производном классе.
-    abstract public void AbstractMethod();
+    public abstract void AbstractMethod();
+
+    // 4.
+    // Абстрактное свойство
+    public abstract string? Name { get; set; }
 }

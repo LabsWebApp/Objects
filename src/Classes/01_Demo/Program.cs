@@ -53,18 +53,12 @@ internal class DemoClass : object
                 _significanceField = value;
         }
 
-        get // var x = SignificanceField
+        get => _significanceField switch
         {
-            switch (_significanceField)
-            {
-                case null:
-                    return "В поле SignificanceField отсутствуют данные.";
-                case "hello world":
-                    return _significanceField.ToUpper() + "!";
-                default:
-                    return _significanceField;
-            }
-        }
+            null => "В поле SignificanceField отсутствуют данные.",
+            "hello world" => _significanceField.ToUpper() + "!",
+            _ => _significanceField
+        };
     }
 
     public string? GetInitStringProperty { get; init; }

@@ -1,9 +1,9 @@
 ﻿DemoClass demo = new DemoClass();
 
 demo.Method();
-//demo.MethodWithDefault();
+demo.MethodWithDefault();
 ((IInterface)demo).MethodWithDefault();
-(demo as IInterface).MethodWithDefault();
+(demo as IInterface)?.MethodWithDefault();
 
 //Delay.
 Console.ReadKey();
@@ -16,8 +16,7 @@ internal interface IInterface
 
 internal class DemoClass : IInterface
 {
-    public void Method()
-    {
-        Console.WriteLine("Метод - реализация Интерфейса.");
-    }
+    public void Method() => Console.WriteLine("Метод - реализация Интерфейса.");
+
+    public void MethodWithDefault() => Console.WriteLine("DemoClass");
 }

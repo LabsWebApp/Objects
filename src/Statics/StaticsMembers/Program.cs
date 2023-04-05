@@ -27,7 +27,7 @@ internal class NotStaticClass
 
     public static void StaticMethod()
     {
-        //Console.WriteLine($"Instance.Id = {Id}");
+        //Console.WriteLine($"Instance.Id = {_id}");
 
         Console.WriteLine("В статических методах нельзя обращаться к не статическим полям.");
     }
@@ -55,7 +55,6 @@ internal class NotStaticClass
     static NotStaticClass() => _readonlyField = 1;
 
     // Статические методы могут быть перегружены.
-    public static void StaticMethod(int s) => Console.WriteLine("Перегруженный статический метод, неcтатического NotStaticClass " + s);
-
-    public static void Method(int s) => Console.WriteLine("Перегруженный статический метод, неcтатического Method " + s);
+    public static void Method(int s) => Console.WriteLine("Перегруженный статический метод, неcтатического Method " + s + "(число)");
+    public static void Method(string s) => Console.WriteLine("Перегруженный статический метод, неcтатического Method " + s + "(строка)");
 }

@@ -8,7 +8,7 @@ instance.field4 = 4;
 instance.field5 = 5;
 
 // Приведение экземпляра класса DerivedClass к базовому типу BaseClass.
-BaseClass newInstance = (BaseClass)instance; // Upcast
+var newInstance = (BaseClass)instance; // Upcast
 
 Console.WriteLine(newInstance.field1);
 Console.WriteLine(newInstance.field2);

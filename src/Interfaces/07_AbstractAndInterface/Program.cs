@@ -8,13 +8,13 @@ instance.Method2();
 // Delay.
 Console.ReadKey();
 
-interface IInterface
+internal interface IInterface
 {
     void Method1();
-    void Method2() => Console.WriteLine("Реализация по умолчанию");
+    void Method2();
 }
 
-abstract class AbstractClass : IInterface
+internal abstract class AbstractClass : IInterface
 {
     // Реализация абстрактного метода из интерфейса, в абстрактном классе обязательна.
     public void Method1() => Console.WriteLine("Метод - реализация интерфейса в абстрактном классе.");
@@ -23,10 +23,7 @@ abstract class AbstractClass : IInterface
     public abstract void Method2();
 }
 
-class ConcreteClass : AbstractClass
+internal class ConcreteClass : AbstractClass
 {
-    public override void Method2()
-    {
-        Console.WriteLine("Метод - реализация интерфейса в абстрактном классе.");
-    }
+    public override void Method2() => Console.WriteLine("Метод - реализация интерфейса в абстрактном классе.");
 }

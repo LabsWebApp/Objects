@@ -15,10 +15,10 @@ internal abstract class AbstractClass
     {
         Console.WriteLine("1 AbstractClass()");
 
-        // Вызывается реализация метода из производного класса - ConcreteClass.
+        // Вызывается реализация метода из производного класса
         this.AbstractMethod();
 
-        Console.WriteLine("2 AbstractClass()");
+        Console.WriteLine("END AbstractClass()");
     }
 
     public abstract void AbstractMethod();
@@ -31,9 +31,9 @@ internal class ConcreteClass : AbstractClass
     // Конструктор (отрабатывает вторым).
     public ConcreteClass()
     {
-        Console.WriteLine("3 ConcreteClass()");
         s = "SECOND";
+        Console.WriteLine("3 ConcreteClass()");
     }
 
-    public override void AbstractMethod() => Console.WriteLine($"Реализация метода AbstractMethod() в ConcreteClass  {s}");
+    public override void AbstractMethod() => Console.WriteLine($"Реализация метода AbstractMethod() в ConcreteClass  ({s})");
 }

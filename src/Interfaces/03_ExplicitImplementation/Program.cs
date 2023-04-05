@@ -2,9 +2,11 @@
 
 DerivedClass instance = new DerivedClass();
 
-//instance. -- // На экземпляре не видим методов интерфейсов.
+//instance.  // На экземпляре не видим методов интерфейсов.
 
 // Приведем экземпляр класса DerivedClass - instance, к базовому интерфейсному типу Interface1
+
+(instance as IInterface1).Method();
 
 IInterface1 instance1 = instance as IInterface1;
 instance1.Method();

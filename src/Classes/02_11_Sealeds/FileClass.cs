@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sealeds
 {
-    class FileClass
+    internal class FileClass
     {
         public void Method() => Console.WriteLine("class FileClass");
     }

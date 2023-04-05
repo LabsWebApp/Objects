@@ -1,7 +1,7 @@
 ﻿
 using Sealeds;
 
-//new Aaa().Method();
+new Aaa().Method();
 
 // Герметизированные классы.
 

@@ -5,7 +5,7 @@ internal partial class PartialClass
     public void MethodFromPart1() => Console.WriteLine("1. Part");
 
     // Определение частичного метода. 
-    partial void PartialMethod() => Console.WriteLine("Вызван частичный метод - PartialMethod(). [1. - Part]\"");
+    partial void PartialMethod() => Console.WriteLine("Вызван частичный метод - PartialMethod(). [0. - 1. - Part]\"");
 
     // Вызов частичного метода через метод обертку.
     public void CallPartialMethod()

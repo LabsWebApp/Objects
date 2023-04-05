@@ -5,7 +5,7 @@ AbstractClassA instance = new ConcreteClass();
 
 instance.OperationA();
 
-//instance.OperationB();  // Вопрос: почему недоступен данный метод?
+// instance.OperationB();  // Вопрос: почему недоступен данный метод?
 
 // Delay.
 Console.ReadKey();

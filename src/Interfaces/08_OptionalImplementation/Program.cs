@@ -3,24 +3,28 @@
 DerivedClass instance = new DerivedClass();
 instance.Method();
 
-IInterface instance1 = instance as IInterface;
+BaseClass instance1 = instance as BaseClass;
 instance1.Method();
+
+IInterface instance2 = instance as IInterface;
+instance2.Method();
 
 // Delay.
 Console.ReadKey();
 
-interface IInterface
+internal interface IInterface
 {
-    void Method() => Console.WriteLine("Реализация по умолчанию");
+    void Method();
 }
 
-class BaseClass
+internal class BaseClass
 {
-    public void Method() => Console.WriteLine("BaseClass.Method()");
+    public virtual void Method() => Console.WriteLine("BaseClass.Method()");
 }
 
-class DerivedClass : BaseClass, IInterface
+internal class DerivedClass : BaseClass, IInterface
 {
     // Реализация интерфейса не обязательна, т.к., 
     // сигнатуры методов в классе и интерфейсе совпадают.
+    //public override void Method() => Console.WriteLine("DerivedClass.Method()");
 }

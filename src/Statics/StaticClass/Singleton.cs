@@ -16,9 +16,6 @@ namespace Statics
         {
         }
 
-        // Фабричный метод.
-        // Если: объект еще не создан, создаётся новый объект
-        // Иначе: возвращаем ссылку на существующий объект
-        public static Singleton Instance() => _instance ??= new Singleton();
+        public static Singleton Instance => _instance ??= new Singleton();
     }
 }

@@ -1,8 +1,9 @@
 ﻿// 1 Вариант. (Вызывается только Статический конструктор.)
-//NotStaticClass.StaticMethod();
+NotStaticClass.StaticMethod();
 
 // 2 Вариант. (Вызываются оба Конструктора.)
-new NotStaticClass().NotStaticMethod();
+//new NotStaticClass().NotStaticMethod();
+//NotStaticClass.StaticMethod();
 
 // Delay.
 Console.ReadKey();

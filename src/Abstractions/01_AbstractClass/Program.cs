@@ -5,7 +5,6 @@ instance.Method();
 // Delay.
 Console.ReadKey();
 
-
 // Абстрактный класс.
 internal abstract class AbstractClass
 {
