@@ -1,5 +1,6 @@
 ﻿namespace Di;
 
+//уместно, чтобы класс Calculator отвечал за запись в текстовый файл?
 public class Calculator
 {
     private const string FileName = "Calculator.log";
