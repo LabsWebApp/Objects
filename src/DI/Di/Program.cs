@@ -1,12 +1,17 @@
 ﻿using Di;
 
-var number1 = GetNumber("Ведите первое число: > ");
-var number2 = GetNumber("Ведите второе число: > ");
+var number1 = GetNumber("Enter the first number: > ");
+var number2 = GetNumber("Enter the second number: > ");
 var operation = GetOperator();
-var calc = new Calculator();
+
+// Следующие две строки изменены
+//var logger = new FileLogger();
+var logger = new NullLogger();
+var calc = new Calculator(logger);
+
 var result = GetResult(calc, number1, number2, operation);
 Console.WriteLine($"{number1} {operation} {number2} = {result}");
-Console.Write("Нажмите что-либо для выхода...");
+Console.Write("Press any key to continue...");
 Console.ReadKey();
 
 static float GetNumber(string message)
