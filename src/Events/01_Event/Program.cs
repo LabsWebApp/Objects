@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿// События.
+// События.
 
 namespace Events;
 
@@ -42,7 +41,3 @@ class Program
         Console.ReadKey();
     }
 }
-=======
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
->>>>>>> 36b5a2ccfc23e472b5d3f7b0f02d5b0994c47eff
