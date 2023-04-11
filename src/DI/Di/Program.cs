@@ -1,18 +1,20 @@
 ﻿using Di;
+using IoC;
 using Unity;
 
-var number1 = GetNumber("Enter the first number: > ");
-var number2 = GetNumber("Enter the second number: > ");
+var number1 = GetNumber("Введите первое число: > ");
+var number2 = GetNumber("Введите второе число: > ");
 var operation = GetOperator();
 
 // Следующие три строки необходимо изменить
-var container = new UnityContainer();
-container.RegisterType<ILogger, FileLogger>();
+var container = new SimpleIoC();
+container.Register<Calculator>();
+container.Register<ILogger, FileLogger>();
 var calc = container.Resolve<Calculator>();
 
 var result = GetResult(calc, number1, number2, operation);
 Console.WriteLine($"{number1} {operation} {number2} = {result}");
-Console.Write("Press any key to continue...");
+Console.Write("Press any key to exit...");
 Console.ReadKey();
 
 static float GetNumber(string message)
