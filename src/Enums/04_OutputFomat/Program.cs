@@ -2,7 +2,7 @@
 
 EnumType digit = EnumType.Ten;
 
-Console.WriteLine("Число {0}", digit.ToString());
+Console.WriteLine($"Число {digit.ToString()}");
 
 // Enum.Format() - Позволяет производить более точное форматирование за счет указания флага, 
 // а также получать имена элементов перечисления по их числовым значениям

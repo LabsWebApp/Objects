@@ -1,4 +1,6 @@
-﻿namespace IoC;
+﻿using System;
+
+namespace IoC;
 
 public class SimpleIoC
 {
@@ -35,7 +37,7 @@ public class SimpleIoC
     {
         var type = typeof(TType);
         if (_registeredObjects.ContainsKey(type)) _registeredObjects.Remove(type);
-        _registeredObjects.Add(type, new EnteredObject(typeof(TLive), isSingleton, instance));
+        _registeredObjects.Add(type, new EnteredObject(typeof(TLive), isSingleton, instance, CreateInstance));
     }
     private object ResolveObject(Type type)
     {
@@ -62,18 +64,20 @@ public class SimpleIoC
     private class EnteredObject
     {
         private readonly bool _isSingleton;
-        public EnteredObject(Type liveType, bool isSingleton, object instance)
+        private readonly Func<Type, object[], object> _createInstance;
+        public EnteredObject(Type liveType, bool isSingleton, object instance, Func<Type, object[], object> createInstance)
         {
             _isSingleton = isSingleton;
             LiveType = liveType;
             SingletonInstance = instance;
+            _createInstance = createInstance;
         }
         public Type LiveType { get; }
         public object SingletonInstance { get; private set; }
 
         public object CreateInstance(params object[] args)
         {
-            var instance = Activator.CreateInstance(LiveType, args);
+            var instance = _createInstance(LiveType, args);
             if (_isSingleton)
                 SingletonInstance = instance;
             return instance;
@@ -81,7 +85,12 @@ public class SimpleIoC
     }
     #endregion private methods
 
-    #region MyRegion
+    #region protected method
+    protected virtual object CreateInstance(Type type, params object[] args) =>
+        Activator.CreateInstance(type, args);
+    #endregion
+
+    #region Dictionary
     private readonly IDictionary<Type, EnteredObject> _registeredObjects = new Dictionary<Type, EnteredObject>();
     #endregion
 }

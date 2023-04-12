@@ -34,7 +34,10 @@ Console.WriteLine(digit); // Переменная изменилась.
 Console.WriteLine((int)EnumType.Ten); // Константа не изменилась.
 
 digit++;
+Console.WriteLine(digit);
 digit = digit + 5;
+Console.WriteLine(digit);
+Console.WriteLine(digit.GetType());
 
 // Недопустимо.
 //digit = ++EnumType.One;

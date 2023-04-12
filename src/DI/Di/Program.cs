@@ -1,13 +1,12 @@
 ﻿using Di;
 using IoC;
-using Unity;
 
 var number1 = GetNumber("Введите первое число: > ");
 var number2 = GetNumber("Введите второе число: > ");
 var operation = GetOperator();
 
 // Следующие три строки необходимо изменить
-var container = new SimpleIoC();
+var container = new LambdaIoC();
 container.Register<Calculator>();
 container.Register<ILogger, FileLogger>();
 var calc = container.Resolve<Calculator>();

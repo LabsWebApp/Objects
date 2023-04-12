@@ -1,6 +1,4 @@
-﻿using MetanitExample;
-
-namespace MetanitGenerics;
+﻿namespace MetanitGenerics;
 
 internal delegate T MessageBuilder<out T>(string text);
 

@@ -1,5 +1,6 @@
 ﻿DemoStruct st;
 st.Method();
+
 // Упаковка (Boxing).
 IInterface boxed = st;
 

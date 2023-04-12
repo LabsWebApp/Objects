@@ -4,12 +4,12 @@
 
 // От структур нельзя наследоваться.
 
-DemoStruct instance = new DemoStruct();
+DemoStruct instance = new();
 
 ValueType valueType = instance as ValueType;
 
 Console.WriteLine($"instance  = {instance.GetHashCode()}");
-Console.WriteLine($"valueType = {instance.GetHashCode()}");
+Console.WriteLine($"valueType = {valueType.GetHashCode()}");
 
 // Delay.
 Console.ReadKey();

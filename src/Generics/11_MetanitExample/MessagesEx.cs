@@ -1,4 +1,4 @@
-﻿namespace MetanitExample;
+﻿namespace MetanitGenerics;
 
 internal abstract class Sender
 {

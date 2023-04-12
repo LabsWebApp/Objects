@@ -22,7 +22,7 @@ Console.WriteLine(zero);
 
 Console.WriteLine(new string('-', 10));
 
-for (EnumType number = EnumType.Zero; number <= EnumType.Three; number++)
+for (EnumType number = EnumType.Zero; number <= EnumType.Two; number++)
     Console.WriteLine(number);
 
 // Delay.

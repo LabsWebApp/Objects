@@ -17,16 +17,16 @@ Console.ReadKey();
 
 struct DemoStruct
 {
-       public int Field { get; set; }
+       //public int Field { get; set; }
 
-        public int Value;
+       public int Value;
 
-    //public int Field = 10;
+    public int Field = 10;
 
-    //public DemoStruct()
-    //{
-    //    Field = 66;
-    //}
+    public DemoStruct()
+    {
+        Field = 66;
+    }
 
     public void Show() => Console.WriteLine($"Field = {Field}\tValue = {Value}");
 }

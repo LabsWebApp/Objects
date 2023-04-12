@@ -151,9 +151,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Structures", "04_Structu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enums", "Enums", "{6FE058D9-4116-4EC3-AF54-85ACCD89D848}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_MetanitExample_107ез", "Generics\11_MetanitExample\11_MetanitExample_107ез.csproj", "{114557FB-F300-4E80-89AB-E11FFAF94C88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_MetanitExample", "Generics\11_MetanitExample\11_MetanitExample.csproj", "{114557FB-F300-4E80-89AB-E11FFAF94C88}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_ActionPredicateFunc", "Generics\12_ActionPredicateFunc\12_ActionPredicateFunc.csproj", "{A3F811AD-2296-4251-8625-4D5AD2008292}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12_ActionPredicateFunc_107ез", "Generics\12_ActionPredicateFunc\12_ActionPredicateFunc_107ез.csproj", "{A3F811AD-2296-4251-8625-4D5AD2008292}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13_Delegate.Release", "Generics\13_Delegate.Release\13_Delegate.Release.csproj", "{5E4BF233-5ACB-40A3-9329-FFBF7A4E7951}"
 EndProject
@@ -199,7 +199,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI", "DI", "{11BDAC29-B489-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Di", "DI\Di\Di.csproj", "{EE4E83AA-74D5-449D-BC81-23AC026EA1E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoC", "DI\IoC\IoC.csproj", "{C5C9FA24-9DE8-4068-A463-9D69C7DB8B2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoC", "DI\IoC\IoC.csproj", "{C5C9FA24-9DE8-4068-A463-9D69C7DB8B2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

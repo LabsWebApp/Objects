@@ -19,7 +19,7 @@ object o = a;
 short b = (short)o;
 
 // Распаковка должна производиться только в тот тип, из которого производилась упаковка.
-//byte s = (byte)o;
+byte s = (byte)o;
 
 // Delay.
 Console.ReadKey();
