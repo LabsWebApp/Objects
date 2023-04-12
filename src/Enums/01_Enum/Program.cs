@@ -29,8 +29,8 @@ for (EnumType number = EnumType.Zero; number <= EnumType.Two; number++)
 Console.ReadKey();
 
 
-// Нельзя использовать любой системный целый тип данных C# (Byte, SByte, Int16, UInt16, Int32, 
-// UInt32, Int64, UInt64)
+// Нельзя использовать любой системный целый тип данных C#
+// (Byte, SByte, Int16, UInt16, Int32,UInt32, Int64, UInt64)
 enum EnumType : byte // Явно указываем использовать тип byte.
 {
     Zero = 0,
@@ -38,3 +38,4 @@ enum EnumType : byte // Явно указываем использовать т�
     Two = 2,
     Three = 3
 }
+

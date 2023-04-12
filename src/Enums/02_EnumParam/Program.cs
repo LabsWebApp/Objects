@@ -2,7 +2,7 @@
 
 using EnumParam;
 
-void MethodEnum(EnumType e)
+void EnumMethod(EnumType e)
 {
     switch (e)
     {
@@ -22,10 +22,10 @@ void MethodEnum(EnumType e)
     }
 }
 
-MethodEnum(EnumType.Five);
+EnumMethod(EnumType.Five);
 
 EnumType digit = EnumType.Ten;
-MethodEnum(digit);
+EnumMethod(digit);
 
 int i = (int)++digit;
 Console.WriteLine(i);

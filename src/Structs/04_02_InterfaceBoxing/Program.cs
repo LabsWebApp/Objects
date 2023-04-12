@@ -16,11 +16,13 @@ var xw = new XWrapper();
 Console.WriteLine(xw);
 
 Increment(xw);
+
 Console.WriteLine(xw);
 
 Console.WriteLine("*****");
 
 var ixw = xw as IXWrapper;
+//var ixw = (IXWrapper)xw;
 
 Console.WriteLine(ixw.X);
 Increment(ixw);

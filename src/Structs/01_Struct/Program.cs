@@ -5,8 +5,7 @@ DemoStruct instance = new ();
 
 instance.Show();
 
-//var instance2 = new DemoStruct { Field = 11 };
-var instance2 = new DemoStruct { Field = 11 };
+var instance2 = new DemoStruct { Field = 11, Value = 55 };
 
 instance2.Show();
 
@@ -17,9 +16,11 @@ Console.ReadKey();
 
 struct DemoStruct
 {
-       //public int Field { get; set; }
+   // public int Field { get; set; }
 
-       public int Value;
+    public int Value;
+
+
 
     public int Field = 10;
 
@@ -28,5 +29,7 @@ struct DemoStruct
         Field = 66;
     }
 
-    public void Show() => Console.WriteLine($"Field = {Field}\tValue = {Value}");
+    public void Show() => Console.WriteLine(ToString());
+
+    public override string ToString() => $"Field = {Field}\tValue = {Value}";
 }

@@ -27,6 +27,8 @@ class Program
         instance.DemoEvent += new EventDelegate(Handler1);
         instance.DemoEvent += Handler2;
 
+       // Console.WriteLine(instance.DemoEvent);
+
         // Метод который вызывает событие.
         instance.InvokeEvent();
 

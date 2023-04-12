@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq.Expressions;
 
 namespace IoC;
 
@@ -86,7 +86,7 @@ public class SimpleIoC
     #endregion private methods
 
     #region protected method
-    protected virtual object CreateInstance(Type type, params object[] args) =>
+    public virtual object CreateInstance(Type type, params object[] args) =>
         Activator.CreateInstance(type, args);
     #endregion
 
