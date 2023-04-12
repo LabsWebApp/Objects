@@ -8,8 +8,8 @@ Console.WriteLine($"Дата.месяц.год время(чч:мм:cc) : {now:G
 Console.WriteLine($"Дата.месяц.год время(чч:мм) : {now:g}");
 Console.WriteLine($"Текущий месяц и дата : {now:M}");
 Console.WriteLine($"Текущий месяц и год : {now:Y}");
-Console.WriteLine($"Время(чч:мм:cc) : {now:T}");
-Console.WriteLine($"Время(чч:мм) : {now:t}");
+Console.WriteLine("Время(чч:мм:cc) : {0:T}", now);
+Console.WriteLine(string.Format("Время(чч:мм) : {0:t}", now));
 
 Console.WriteLine("*****");
 

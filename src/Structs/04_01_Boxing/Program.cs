@@ -15,11 +15,14 @@ short a = 25;
 // Упаковка переменной - а  (Boxing).
 object o = a;
 
+Console.WriteLine(o.GetType());
+Console.WriteLine(o.GetHashCode());
+
 // Распаковка объекта (UnBoxing).
 short b = (short)o;
 
 // Распаковка должна производиться только в тот тип, из которого производилась упаковка.
-byte s = (byte)o;
+// byte s = (byte)o;
 
 // Delay.
 Console.ReadKey();

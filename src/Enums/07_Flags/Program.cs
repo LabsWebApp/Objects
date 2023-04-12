@@ -7,6 +7,8 @@ WriteLine(employee);
 WriteLine(UserType.Driver | UserType.Admin);
 WriteLine(UserType.Driver | UserType.Customer);
 
+//
+WriteLine("*********");
 employee |= UserType.Sysadmin;
 WriteLine(employee);
 
@@ -17,8 +19,9 @@ WriteLine((employee & UserType.Driver) == UserType.Driver);
 WriteLine((employee & UserType.Sysadmin) == UserType.Sysadmin);
 
 WriteLine("*********");
-
+ReadKey();
 var audience = UserType.None;
+audience.Print();
 audience = audience.Add(UserType.Employee, UserType.Customer);
 audience.Print();
 audience = audience.Remove(UserType.Driver);

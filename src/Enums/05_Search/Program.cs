@@ -6,7 +6,7 @@ EnumType number = (EnumType)element;
 
 Console.WriteLine($"Значение константы {number}: {(byte)number}");
 
-// Enum.IsDefined() - Позволяет определить, является ли символьная строка элементом перечисления? 
+// Enum.IsDefined() Позволяет определить, является ли символьная строка элементом перечисления? 
 Console.WriteLine(Enum.IsDefined(typeof(EnumType), "one")
     ? "Да, перечисление содержит элемент с таким именем."
     : "Нет, перечисление не содержит элемент с таким именем.");
