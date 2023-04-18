@@ -5,7 +5,6 @@ namespace IoC;
 public class SimpleIoC
 {
     #region public methods
-
     public SimpleIoC() => RegisterInstance(this);
 
     public void Register<TType>() where TType : class =>
@@ -29,7 +28,6 @@ public class SimpleIoC
     public TResolve Resolve<TResolve>() => (TResolve)ResolveObject(typeof(TResolve));
 
     public object Resolve(Type type) => ResolveObject(type);
-
     #endregion public methods
 
     #region private methods
@@ -85,7 +83,7 @@ public class SimpleIoC
     }
     #endregion private methods
 
-    #region protected method
+    #region virtual method
     public virtual object CreateInstance(Type type, params object[] args) =>
         Activator.CreateInstance(type, args);
     #endregion
